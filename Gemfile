@@ -6,4 +6,3 @@ gem('pry')
 gem('rspec')
 gem('capybara')
 gem('pg')
-D
