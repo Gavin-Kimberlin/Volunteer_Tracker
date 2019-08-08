@@ -1,0 +1,18 @@
+<h1>All Projects</h1>
+<h3>Listed by project id</h3>
+
+<% if @projects.any? %>
+<table>
+  <tr> <th>Project</th><th>Project ID</th> </tr>
+  <% @projects.each do |project| %>
+  <tr>
+    <td><a href="/projects/<%= project.id %>"><%= project.name%></a></td>
+    <td><%=project.id%></td>
+  </tr>
+  <% end %>
+</table>
+<% else %>
+<p>All projects other than this one are full</p>
+<% end %>
+
+<p><a href="/projects/new">Add a new project</a></p>

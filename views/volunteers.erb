@@ -1,0 +1,15 @@
+<h1>All Volunteers</h1>
+<h3>Listed by volunteer number</h3>
+
+<% if @volunteers.any? %>
+<table>
+  <tr> <th>Volunteer type</th><th>Volunteer number</th> </tr>
+  <% @volunteers.each do |volunteer| %>
+  <tr> <td><%= volunteer.name%></td> <td><%=volunteer.id%></td></tr>
+  <% end %>
+</table>
+<% else %>
+<p>All volunteers other than this one are working on a project</p>
+<% end %>
+
+<p><a href="/volunteeers/new">Add a new </a></p>
